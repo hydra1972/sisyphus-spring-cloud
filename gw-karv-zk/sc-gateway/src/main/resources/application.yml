@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: sc-gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: 163                     #网关路由到网易官网
+        uri: lb://sc-producer
+        predicates:
+          - Path=/sp/**
+        filters:
+          - StripPrefix=1
+      - id: baidu                     #网关路由到网易官网
+        uri: http://baidu.com
+        predicates:
+          - Path=/baidu/**
+        filters:
+          - StripPrefix=1
+    zookeeper:
+      connect-string: 192.168.56.208:2181
+      discovery:
+        enabled: true
+
+server:
+  port: 9000
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+#开启actuator管理api，后面要关闭
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<groupId>org.dl.eg</groupId>
+    <artifactId>sisyphus-spring-cloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	<description>spring cloud 学习内容</description>
+
+    <modelVersion>4.0.0</modelVersion>
+    <name>sisyphus-spring-cloud</name>
+    <modules>
+        <module>gw-karv-zk</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+</project>

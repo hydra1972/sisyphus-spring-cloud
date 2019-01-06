@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: sc-consumer
+  cloud:
+    zookeeper:
+      connectString: 192.168.56.208:2181
+      discovery:
+        register: true
+
+server:
+  port: 8000
+feign:
+  hystrix:
+    enabled: true
